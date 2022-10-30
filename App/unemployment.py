@@ -15,3 +15,9 @@ parsed_response = json.loads(response.text)
 print(type(parsed_response))
 pprint(parsed_response)
 
+
+#Part A
+print("-------------------------")
+print("LATEST UNEMPLOYMENT RATE:")
+#print(data[0])
+print(f"{data[0]['value']}%", "as of", data[0]["date"])
