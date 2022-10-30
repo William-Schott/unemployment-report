@@ -1,6 +1,6 @@
 from getpass import getpass
 
-API_KEY = getpass("Please input your AlphaVantage API Key: ") 
+#API_KEY = getpass("Please input your AlphaVantage API Key: ") 
 #PCBWXAJKUC99DFN6
 
 
@@ -10,7 +10,7 @@ from pprint import pprint
 
 import requests
 
-ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
 request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 
@@ -22,9 +22,14 @@ pprint(parsed_response)
 
 
 #Part A
+
+breakpoint()
+
+latest = parsed_response["data"][0]
+pring(latest)
 print("-------------------------")
 print("LATEST UNEMPLOYMENT RATE:")
-#print(data[0])
+print(data[0])
 print(f"{data[0]['value']}%", "as of", data[0]["date"])
 
 
