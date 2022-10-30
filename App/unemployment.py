@@ -15,24 +15,3 @@ parsed_response = json.loads(response.text)
 print(type(parsed_response))
 pprint(parsed_response)
 
-data = parsed_response["data"]
-
-from statistics import mean
-
-this_year = [d for d in data if "2022-" in d["date"]]
-
-rates_this_year = [float(d["value"]) for d in this_year]
-
-
-print("-------------------------")
-print("AVG UNEMPLOYMENT THIS YEAR:", f"{mean(rates_this_year)}%")
-print("NO MONTHS:", len(this_year))
-
-
-from plotly.express import line
-
-dates = [d["date"] for d in data]
-rates = [float(d["value"]) for d in data]
-
-fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
-fig.show()
