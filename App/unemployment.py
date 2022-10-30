@@ -10,6 +10,8 @@ from pprint import pprint
 
 import requests
 
+ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+
 request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 
 response = requests.get(request_url)
