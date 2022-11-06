@@ -10,7 +10,7 @@ from pprint import pprint
 from statistics import mean
 
 import requests
-from dotenv import load_detenv
+from dotenv import load_dotenv
 from plotly.express import line
  
 

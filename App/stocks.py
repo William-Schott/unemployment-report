@@ -1,7 +1,7 @@
 print("Stocks Report...")
 
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 from pandas import read_csv
 
 load_dotenv()
