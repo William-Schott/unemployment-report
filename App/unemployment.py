@@ -7,8 +7,14 @@ from getpass import getpass
 import os
 import json
 from pprint import pprint
+from statistics import mean
 
 import requests
+from dotenv import load_detenv
+from plotly.express import line
+ 
+
+load_dotenv()
 
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
