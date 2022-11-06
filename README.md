@@ -21,6 +21,13 @@ python app/my_script.py
 python app/unemployment.py
 API Key: PCBWXAJKUC99DFN6
 
-comand to run ALPHAVANTAGE_API_KEY="_____" python app/unemployment.py
+comand to run 
+#python app/unemployment.py
+python -m app.unemployment
 
+run stocks report:
 
+'''sh
+#python -app/stock.py
+python -m app.stocks
+'''sh
