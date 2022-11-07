@@ -12,7 +12,7 @@ on:
 permissions:
   contents: read
 
-jobs:
+jobs:s
   build:
 
     runs-on: ubuntu-latest

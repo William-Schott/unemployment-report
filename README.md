@@ -4,6 +4,7 @@ For Homework
 ##Setup 
 
 Create and activate a virtual envoronment
+cd ~/Desktop/unemployment-report
 conda create -n unemployment-env python=3.8
 conda activate unemployment-env
 

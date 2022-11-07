@@ -6,6 +6,7 @@ requests
 
 plotly
 
-os
 
-sys
+pytest
+
+
