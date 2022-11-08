@@ -7,37 +7,45 @@ from pandas import read_csv
 
 from App.alpha import API_KEY
 
-def format_usd(my_price):  
+def format_usd(my_price):
     return f"${my_price:,.2f}"
 
-## need to pass in symobol parameter!!! in the () in the def
+
 def fetch_stocks_data(symbol):
     request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
 
     df = read_csv(request_url)
+
     return df
+
 
 
 if __name__ == "__main__":
 
-    print("Stocks Report...")
+    print("STOCKS REPORT...")
 
     symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
     print("SYMBOL:", symbol)
 
     df = fetch_stocks_data(symbol)
-    
+
     print(df.columns)
     print(df.head())
+    #breakpoint()
 
-    #Chalange A
-    # print latest closing price
-    print("LATEST:", '${:,.2f}'.format(latest["adjusted_close"]), "as of", latest["timestamp"])
+    # CHALLENGE A:
+    # print the latest closing date and price
 
+    latest = df.iloc[0]
 
-    #chalenge B
-    # What is the highest high price (formated USD)
-    # What is the lowest low price
+    #print(latest["timestamp"])
+    #print(latest["close"])
+    print("LATEST:", format_usd(latest["adjusted_close"]), "as of", latest["timestamp"])
 
-    print("HIGH:", '${:,.2f}'.format(df["high"].max()))
-    print("LOW:", '${:,.2f}'.format(df["low"].min()))
+    # Challenge B
+    #
+    # What is the highest high price (formatted as USD)?
+    # What is the lowest low price (formatted as USD)?
+
+    print("HIGH:", format_usd(df["high"].max()))
+    print("LOW:", format_usd(df["low"].min()))

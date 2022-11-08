@@ -1,15 +1,15 @@
 ##test file must be _test.py
 ## test function must me test_...
 
-def test_usd_formatting():
+
 
 
   
 #make sure that this is indented from the def
-    from App.stocks import format_usd
-    from pandas import DataFrame
+from App.stocks import format_usd, fetch_stocks_data
+from pandas import DataFrame
 
-
+def test_usd_formatting():
 
 
     assert format_usd(4.5) == "$4.50"
@@ -28,3 +28,6 @@ def test_usd_formatting():
         assert "low" in result.columns
 
         assert len(result) >= 100
+    
+    ##test invalid inputs?
+   ### result = fetch_stocks_data("NFLX")
