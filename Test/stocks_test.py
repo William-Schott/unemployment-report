@@ -6,7 +6,8 @@
 
   
 #make sure that this is indented from the def
-from App.stocks import format_usd, fetch_stocks_data
+<<<<<<< Updated upstream
+from app.stocks import format_usd, fetch_stocks_data
 
 from pandas import DataFrame
 
@@ -15,6 +16,13 @@ from pandas import DataFrame
 def test_usd_formatting():
 
     #assert 2 + 2 == 4
+=======
+
+
+def test_usd_formatting():
+    from app.stocks import format_usd, fetch_stocks_data
+    from pandas import DataFrame
+>>>>>>> Stashed changes
 
     assert format_usd(4.5) == "$4.50"
 
