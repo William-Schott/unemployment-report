@@ -9,7 +9,7 @@ import requests
 
 from plotly.express import line
  
-from App.alpha import API_KEY
+from app.alpha import API_KEY
 
 request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 

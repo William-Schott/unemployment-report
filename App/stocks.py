@@ -5,7 +5,7 @@
 
 from pandas import read_csv
 
-from App.alpha import API_KEY
+from app.alpha import API_KEY
 
 def format_usd(my_price):
     return f"${my_price:,.2f}"
