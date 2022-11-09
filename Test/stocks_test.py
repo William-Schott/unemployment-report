@@ -6,7 +6,7 @@
 
   
 #make sure that this is indented from the def
-from App.stocks import format_usd, fetch_stocks_data
+from app.stocks import format_usd, fetch_stocks_data
 from pandas import DataFrame
 
 def test_usd_formatting():
