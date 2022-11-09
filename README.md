@@ -32,3 +32,33 @@ run stocks report:
 #python -app/stock.py
 python -m app.stocks
 '''sh
+### Email Sending
+
+Run the email service to send an example email and see if everything is working:
+
+```sh
+python -m app.email_service
+```
+
+Send the unemployment report via email:
+
+```sh
+python -m app.unemployment_email
+```
+
+Send the stocks report via email:
+
+```sh
+python -m app.stocks_email
+
+# or in production mode:
+APP_ENV="production" DEFAULT_SYMBOL="GOOGL" python -m app.stocks_email
+```
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
+```
