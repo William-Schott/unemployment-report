@@ -1,6 +1,8 @@
 # unemployment-report
 For Homework
 
+
+Make sure that all your "app" is lower case
 ##Setup 
 
 Create and activate a virtual envoronment
