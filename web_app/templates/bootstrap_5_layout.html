@@ -39,10 +39,23 @@
         https://jinja.palletsprojects.com/en/2.11.x/tricks/
         https://getbootstrap.com/docs/5.0/components/navbar/
     -->
-    {% set nav_links = [
-        ('/about', 'about', 'About'),
-        ('/hello', 'hello', 'Hello'),
-    ] -%}
+    {
+
+
+
+
+
+      <!--
+          SITE NAVIGATION & BOOTSTRAP NAV
+          https://jinja.palletsprojects.com/en/2.11.x/tricks/
+          https://getbootstrap.com/docs/5.0/components/navbar/
+      -->
+      {% set nav_links = [
+          ('/about', 'about', 'About'),
+          ('/hello', 'hello', 'Hello'),
+          ('/unemployment/dashboard', 'unemployment_dashboard', 'Unemployment Dashboard'),
+          ('/stocks/form', 'stocks_form', 'Stocks Form'),
+      ] -%}
     {% set active_page = active_page|default('home') -%}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
@@ -91,7 +104,7 @@
 
         <footer style="margin-top:2em; margin-bottom:2em;">
         <hr>
-            &copy; Copyright 2022 [Your Name Here] |
+            &copy; Copyright 2022 [William Schott] |
             <a href="https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/web-app/README.md">Source</a>
         </footer>
     </div>
